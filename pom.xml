@@ -100,7 +100,23 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <distributionManagement>
+  <repository>
+    <id>maven-releases</id>
+    <!-- CHANGE HERE by your team Nexus server -->
+    <url>http://localhost:8081/repository/maven-releases/</url>
+  </repository>
+  <snapshotRepository>
+    <id>maven-snapshots</id>
+    <!-- CHANGE HERE by your team Nexus server -->
+    <url>http://localhost:8081/repository/maven-releases/</url>
+  </snapshotRepository>
+</distributionManagement>
 
+
+
+
+         
     <dependencies>
         <dependency>
             <groupId>org.apache.tomcat</groupId>
@@ -551,6 +567,12 @@
             <name>Spring Milestone Repository</name>
             <url>https://repo.spring.io/milestone</url>
         </repository>
+        <repository>
+  <id>maven-releases</id>
+  <name>maven-releases</name>
+  <url>http://localhost:8081/repository/maven-releases/</url>
+</repository>
+             
     </repositories>
 
 </project>
